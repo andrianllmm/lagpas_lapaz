@@ -25,6 +25,3 @@
 /dialogue.txt
 /strings.json
 
-# Asset folders to lessen git push time
-/game/music
-/game/images

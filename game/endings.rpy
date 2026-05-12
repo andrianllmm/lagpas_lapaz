@@ -47,9 +47,9 @@ label ending_economics:
     show burnok
     with dissolve
 
-    burnokint "I write about the P80 price point. I write about the "Structure"—how batchoy is an engine for Iloilo\’s economy."
+    burnokint "I write about the P80 price point. I write about the \"Structure\" \—how batchoy is an engine for Iloilo\’s economy."
 
-    burnokint "The piece is called "balanced" by the editors. Marco shares it on every social media platform."
+    burnokint "The piece is called \"balanced\" by the editors. Marco shares it on every social media platform."
 
     show burnok talking
     with dissolve
@@ -82,7 +82,7 @@ label ending_identity:
     show burnok
     with dissolve
 
-    burnokint "I write about the "Superstructure." The pride. The soul of a people is contained in a ceramic bowl."
+    burnokint "I write about the \"Superstructure.\" The pride. The soul of a people is contained in a ceramic bowl."
 
     scene bg black
     with dissolve
@@ -97,7 +97,7 @@ label ending_identity:
     scene bg entrancetolapazmarket
     with dissolve
 
-    burnokint "Tourists flood La Paz in search of the "Soul Food" I described."
+    burnokint "Tourists flood La Paz in search of the \"Soul Food\" I described."
 
     burnokint "It\’s a beloved piece of writing, but as I see the long lines of influencers blocking the entrance to the market stalls, I wonder if I\’ve turned a living culture into a museum exhibit."
 

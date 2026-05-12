@@ -12,14 +12,16 @@ label act3_start:
 
     santos "You\’re looking for the 'true' origin? Chinese traders, butchers in the 30s, Teodorico Lepura, who learned the recipe from a Chinese merchant."
 
-    show santos with moveinleft
+    show santos at left with move
     with dissolve
-    
 
-    show burnok talking with moveinright
+    show burnok talking at right with move
     with dissolve
 
     burnok "I just want to know why people get to have the ability to change the recipe, a mock to the authentic and original soup."
+
+    show burnok
+    with dissolve
 
     show santos talking
     with dissolve
@@ -53,11 +55,10 @@ label act3_continuation:
     show lola consing happy at left
     with dissolve
 
-    burnokint "I see Lola Consing sitting on a bench, rubbing her wrist."
-
-    show marco with moveinright
+    show marco at right
     with dissolve
 
+    burnokint "I see Lola Consing sitting on a bench, rubbing her wrist. "
     extend "Marco is standing by a pillar, watching a group of kids eat a traditional bowl."
 
     hide lola consing happy
@@ -82,8 +83,8 @@ label act3_continuation:
     show burnok thinking
     with dissolve
 
-    burnokint "The cursor on my laptop is a heartbeat."
-    extend "Blink."
+    burnokint "The cursor on my laptop is a heartbeat. "
+    extend "Blink. "
     extend "Blink."
 
     show burnok talking
@@ -92,6 +93,9 @@ label act3_continuation:
     burnok "I could write the 'Love and Tradition' piece. It\’s what the editor wants. It\’s easy. It\’ll get the clicks."
 
     burnokint "I look at the photo I took of Lola Consing\’s hands. The flour under her fingernails. The SSS posters in Ted\’s. Marco\’s face when he talked about his Lolo."
+
+    show burnok thinking
+    with dissolve
 
     menu:
         burnok "One story. But which one is the truth?"

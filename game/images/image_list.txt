@@ -1,0 +1,32 @@
+ate melinda.png
+bg batchoystall.png
+bg batchoystall2.png
+bg black.png
+bg callerealnight.png
+bg entrancetolapazmarket.png
+bg fancyroom.png
+bg lapazcelebration.png
+bg lapazmarketside.png
+bg lapazmarketstall.png
+bg lapazmarketstall2.png
+bg lapazplaza.png
+bg moodyroom.png
+bg smallrestaurant.png
+bg smallrestaurant2.png
+bglapazmarket.png
+burnok talking.png
+burnok thinking.png
+burnok.png
+image_list.txt
+kuya nonoy.png
+lola consing happy.png
+lola consing talking.png
+lola consing thinking.png
+lola consing.png
+marco talking.png
+marco thinking.png
+marco.png
+santos talking.png
+santos thinking.png
+santos.png
+template report.png

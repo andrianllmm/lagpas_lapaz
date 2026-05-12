@@ -133,7 +133,7 @@ menu:
     "How do you stand the smell?":
         show burnok at right
 
-        nonoy "It smells like a living."
+        nonoy "It smells like a livelihood."
         extend " You want quality, you get it fresh. People want the soup 'clean,' but they don\'t want to see the start of a 5:00 AM broth."
 
         "He tosses a bone into a plastic crate."
@@ -213,7 +213,5 @@ label after_menu_3:
     show burnok talking
 
     "Now, how different is it when someone puts a roof and a logo on all of this?"
-    return
-
     # Go to Act 2
     jump act2_start

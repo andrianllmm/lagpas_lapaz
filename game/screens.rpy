@@ -138,14 +138,11 @@ style window:
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
+    xpos gui.namebox_xpos      # Use the namebox position, not text position
+    xanchor 0.0                 # Anchor to left edge
     xsize gui.namebox_width
-    ypos gui.name_ypos
+    ypos gui.namebox_ypos       # Use the namebox Y position
     ysize gui.namebox_height
-
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
 
 style say_label:
     properties gui.text_properties("name", accent=True)

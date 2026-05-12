@@ -176,6 +176,10 @@ label after_menu_2:
     show burnok thinking
     burnokint "It\’s warm."
 
+    $ batchoy_state = "full"
+
+    call screen batchoy_eating
+
     "He takes a sip of the broth first. It\’s deep, salty, and carries a faint metallic tang from the liver."
 
     show burnok talking

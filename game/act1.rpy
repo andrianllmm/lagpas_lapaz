@@ -159,6 +159,10 @@ label after_menu_2:
 
     "I pick up the spoon. It\’s warm."
 
+    $ batchoy_state = "full"
+
+    call screen batchoy_eating
+
     "I take a sip of the broth first. It\’s deep, salty, and carries a faint metallic tang from the liver."
 
     show burnok talking

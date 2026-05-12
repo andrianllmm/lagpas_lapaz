@@ -3,7 +3,7 @@ label act1_start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
+    play sound "audio/market-sounds-2.mp3"
     scene bg black
     with dissolve
 
@@ -14,14 +14,16 @@ label act1_start:
     # show burnok talking
 
     # These display lines of dialogue.
-
+  
     "The jeepney screeches to a halt. The smell of diesel hits first, followed by something thick, salty, and humid gust of wind."
 
     scene bg entrancetolapazmarket2 at full
-    with Dissolve(2.0)
-    play music "music/umib_007.ogg" loop
+    play music "audio/umib_007.ogg" loop
+    with Dissolve(3.0)
+
 
     show burnok thinking
+    with Dissolve(3.0)
 
     "With more sweat running down his face, Burnok wipes his brow with a damp napkin."
 
@@ -44,9 +46,11 @@ label act1_start:
 
     scene bg insidelapazmarket at full
     with dissolve
+    stop sound
 
     show lola consing
     with dissolve
+    play sound "audio/umilse_10.ogg"
     $ renpy.pause()
     "A woman so petite, but with firm arms, slams a mound of dough onto a wooden table."
     extend " The table has a deep groove worn into the center from decades of this."

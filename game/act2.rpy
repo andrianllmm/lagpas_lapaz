@@ -6,12 +6,12 @@ label act2_start:
     with Dissolve(1.0)
     
     "Burnok now enters a restaurant. The air conditioning is a godsend, but it feels sterile after the market."
-    
+    "So this is TED's..."
     show belinda talking at left:
         xalign 0.25
     with dissolve
     
-    belinda "We try to keep it consistent. A bowl here tastes the same as a bowl in the mall. That's what the usual patrons want."
+    belinda "Welcome to TED's. We try to keep it consistent, A bowl here tastes the same as a bowl in the market. That's what the usual patrons want."
     
     menu:
         "What should I ask Ate Belinda?"
@@ -40,13 +40,13 @@ label act2_start:
     show marco at center
     with dissolve 
     "Marco is plating batchoy with a pair of tweezers."
-    
-    show marco talking at right
+    show marco talking
+    marco "People think I'm betraying the dish because I use a pork dashi base."
     show burnok thinking at left
     with dissolve
-    
-    marco "People think I'm betraying the dish because I use a pork dashi base."
-    extend " But look at this crowd, Burnok."
+    show marco talking at right with move:
+        xalign 0.75
+    marco "But look at this crowd, Burnok."
     extend " They're twenty-somethings."
     extend " They'd never step foot in the wet market. Being trendy is how you pique their interest."
     
@@ -55,24 +55,26 @@ label act2_start:
     
     burnok "But if you change the base, is it still the same dish?"
     
-    show marco thinking at right
+    show marco thinking
     
     "He stops, his tweezers still hovering over a piece of chicharon."
-    show marco talking at right
+    show marco talking
     marco "I grew up in my Lolo's stall. I have his old cleaver in my kitchen. I just..."
     extend " I don't want us to be a 'heritage' museum. I want us to be relevant. Besides, time changes everything, it's an adapt or be stagnant in this flowing river of so-called life."
     
-    show marco thinking at right
+    show marco thinking
     "He looks at his phone. A new notification for a food vlog. He sighs, looking more tired than he did a minute ago."
     
     hide marco
+    with dissolve
     hide burnok
     with dissolve
-    
+    scene bg black
+    with dissolve
     scene bg moodyroom
-    with Dissolve(1.0)
+    with Dissolve(2.0)
     
-    burnokint"I'm at a stall with a bright vinyl banner. There's a QR code for payments and the 'Special' is prominently displayed..."
+    burnokint"I'm at a stall for tourists with a bright vinyl banner. There's a QR code for payments and the 'Special' is prominently displayed..."
     
     burnokint "This porcelain bowl here, perfectly white. All the garnish is arranged like a bouquet."
     
@@ -84,7 +86,7 @@ label act2_start:
     hide burnok
     with dissolve
     
-    burnokint "I take a bite. It's sweet. Too sweet. I can't even get a hint of salt."
+    burnokint "I take a bite of the batchoy. It's sweet. Too sweet. I can't even get a hint of salt."
     extend " The liver is missing that punch, replaced by extra sugar and MSG."
     
     show burnok at center
@@ -94,7 +96,7 @@ label act2_start:
         burnokint "What should I think about this bowl?"
         
         "So... this is batchoy for people who are afraid of the market.":
-            burnok "They've sanded down all the rough edges. It's a caricature of what Lola Consing makes."
+            burnok "They've sanded down all the rough edges. It's a caricature of what the batchoy at the wet market makes."
             "It's efficient. It's clean. It's a product, not a process."
             
         "Is this the cost of 'accessibility' and 'cultural amalgamation'?":
@@ -104,14 +106,36 @@ label act2_start:
     hide burnok
     with dissolve
     
-    "I have three versions of batchoy in my stomach, and none of them fully agree with each other."
+    burnokint"I have three versions of batchoy in my stomach, and none of them fully agree with each other."
     
     show burnok thinking at center
     with dissolve
     
-    burnok "Lola Consing's feels like survival. Ted's feels like security. Marco's feels like an argument. And the tourist bowl feels like an apology for all three."
+    burnok "This bowl for tourists feels like a compromise, batchoy that apologizes for smelling like a wet market."
+    burnok "Marco's is an argument, that tradition has to change or die."
+    burnok "TED's is security, clean, consistent, air-conditioned. A bowl that won't offend anyone."
+    burnok "And Lola Consing's stall..."
+    extend " wait."
+    hide burnok
+    with dissolve
+    scene bg black
+    with dissolve
+    burnokint "I don't actually know who runs the original batchoy stall."
+    extend" The first one I've been to."
+    burnokint "I got a name. Lola Consing. But she just makes the noodles. She's not the one serving the soup."
+    burnokint "So who actually owns the original batchoy?"
+    scene bg moodyroom
+    with Dissolve(2.0)
+    show burnok thinking at center
+    with dissolve
     
-    "The economics make sense on paper. Supply, demand, price point, market share. But none of that explains why people get angry when the recipe changes. Why it feels personal."
+    $ renpy.pause()
+    burnok "I've been here for hours, and I don't even know that much."
+    burnok "..."
+    
+    burnok "Well... The economics make sense on paper."
+    extend " Supply, demand, price point, market share. But none of that explains why people get angry when the recipe changes."
+    extend " Why it feels personal."
     
     burnok "This isn't about the soup anymore. Maybe it never was."
     
@@ -121,8 +145,6 @@ label act2_start:
     # Transition to Act 3
     scene bg black
     with Dissolve(1.5)
-    
-    "To be continued..."
     
     jump act3_start
 

@@ -44,7 +44,7 @@ menu:
         show santos talking
         with dissolve
 
-        santos "It’s a symbol. When you eat batchoy, you aren\’t just consuming calories; you\’re consuming history, pride, and social status."
+        santos "It’s a symbol. When you eat batchoy, you aren\’t just consuming calories, you\’re consuming history, pride, and social status."
 
 label act3_continuation:
     scene bg lapazplaza
@@ -65,15 +65,16 @@ label act3_continuation:
     hide marco
     with dissolve
 
-    show burnok talking
+    show burnok thinking
     with dissolve
 
-    burnok "(Fumbling with his recorder) Come on, turn on... just one more..."
+    burnok "Come on, turn on... just one more..."
 
     show burnok thinking
     with dissolve
 
-    burnokint "The battery icon flashes red and dies. I just sit there. The steam from a nearby table hits my face."
+    burnokint "The battery for my recorder finally dies... what an exhausting day."
+    "The steam from a nearby table hits my face."
 
     "A toddler at the next table drops his spoon. It clangs on the floor. His mother wipes it on her shirt and hands it back. No one is talking about 'heritage.' They're just eating."
 

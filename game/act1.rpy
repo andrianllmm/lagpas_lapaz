@@ -18,39 +18,40 @@ label act1_start:
     "The jeepney screeches to a halt. The smell of diesel hits first, followed by something thick, salty, and humid gust of wind."
 
     scene bg entrancetolapazmarket
-    with dissolve
+    with Dissolve(2.0)
 
     show burnok thinking
 
-    "(Wiping sweat with a damp napkin)"
+    "With more sweat running down his face, Burnok wipes his brow with a damp napkin."
 
     burnok "Thirty-three degrees with eighty percent humidity. My body will short-circuit way before I even get a quote."
 
-    show template report at topright
+    show template report at slide_from_right:
+        zoom 1.25
 
     burnok "Just need three 'authentic' soundbites, a photo of a smiling cook, and I can get back to the hotel. I\'m already three hours behind my upload schedule."
 
     hide burnok
     with dissolve
 
-    "A sensory overload of raw pork, wet concrete, and a stray cat weaving through legs. Nearby, a radio is playing a high-pitched, distorted variety show theme. "
+    "A sensory overload of raw pork, wet concrete, and a stray cat weaving through legs floods his senses. Nearby, a radio is playing a high-pitched, distorted variety show theme. "
 
-    "Burnok goes to the first location of interest"
+    "With enough sightseeing Burnok goes to his first location of interest."
 
     scene bg batchoystall
     with dissolve
 
     show lola consing
-
-    "A woman so petite, but with firm arms, slams a mound of dough onto a wooden table. The table has a deep groove worn into the center from decades of this."
-
-    show lola consing
+    with dissolve
+    $ renpy.pause()
+    "A woman so petite, but with firm arms, slams a mound of dough onto a wooden table."
+    extend " The table has a deep groove worn into the center from decades of this."
 
     show lola consing at left with move
 
     show burnok talking at right
 
-    burnok "Uh, excuse me? Lola Consing? Im from The Ledger. Im doing a piece on \—"
+    burnok "Uh, excuse me? Lola Consing? Im from The Ledger. Im doing a piece on\—"
 
     show burnok at right
 
@@ -65,14 +66,14 @@ label act1_start:
     burnok "I\'m not a tourist. I just wanted to ask about the traditional method..."
 
 menu:
-    burnok "What should I say?"
+    '"What should I say?"'
 
     "Can I try kneading it for a second?":
         show lola consing thinking at left
 
         show burnok at right
 
-        consing "(Looking at Burnok\’s clean, soft hands)"
+        "Lola Consing glances at Burnok's hands. Soft, clean, untouched by real work."
 
         show lola consing talking at left
 
@@ -103,11 +104,12 @@ label after_menu:
 
     "Burnok moves to his next target location"
 
-    "{b}THUD{/b}"
+    "*Thud*"
 
-    "{b}THUD{/b}"
+    "*Thud*"
 
-    "The meat section is a forest of hanging hooks. A fly lands on my recorder; I'm too stunned to shoo it"
+    "He visits the meat section, a forest of hanging hooks. The sound of cleavers chopping through bone is constant, but the rhythm is erratic. Like a percussionist who can\'t keep a beat, but somehow it works."
+    "A fly then lands on his recorder, Although he is too shunned to shoo it off."
 
     show kuya nonoy at left
 
@@ -115,24 +117,27 @@ label after_menu:
 
     show burnok talking at right
 
-    burnok "uhh... I usually just see the final product. On a white bowl. With garnish."
+    burnok "Uhh... I usually just see the final product. On a white bowl. With garnish."
 
     show burnok thinking at right
 
 menu:
-    "What should I ask him?"
+    '"What should I ask him?"'
 
     "Is it always this loud in here?":
         show burnok at right
 
-        nonoy "Noise is how you know the city is awake and bustling, which means customers will flock. If the cleavers stop, half the restaurants in La Paz close by noon."
+        nonoy "Noise is how you know the city is awake and bustling, which means customers will flock."
+        extend " If the cleavers stop, half the restaurants in La Paz close by noon."
 
     "How do you stand the smell?":
         show burnok at right
 
-        nonoy "It smells like a living, you want quality, you get it fresh. People want the soup 'clean,' but they don\'t want to see the start of a 5:00 AM broth."
+        nonoy "It smells like a living."
+        extend " You want quality, you get it fresh. People want the soup 'clean,' but they don\'t want to see the start of a 5:00 AM broth."
 
-        "He tosses a bone into a plastic crate. It lands with a heavy, wet sound. One leg of his stool is propped up by a piece of folded plywood."
+        "He tosses a bone into a plastic crate."
+        extend" It lands with a heavy, wet sound. One leg of his stool is propped up by a piece of folded plywood."
 
 label after_menu_2:
     scene bg batchoystall

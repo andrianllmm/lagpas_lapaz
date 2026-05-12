@@ -3,7 +3,7 @@ label act1_start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
+    play sound "audio/market-sounds-2.mp3"
     scene bg black
     with dissolve
 
@@ -14,44 +14,53 @@ label act1_start:
     # show burnok talking
 
     # These display lines of dialogue.
-
+  
     "The jeepney screeches to a halt. The smell of diesel hits first, followed by something thick, salty, and humid gust of wind."
 
-    scene bg entrancetolapazmarket
-    with Dissolve(2.0)
+    scene bg entrancetolapazmarket2 at full
+    play music "audio/umib_007.ogg" loop
+    with Dissolve(3.0)
+
 
     show burnok thinking
+    with Dissolve(3.0)
 
     "With more sweat running down his face, Burnok wipes his brow with a damp napkin."
 
-    burnok "Thirty-three degrees with eighty percent humidity. My body will short-circuit way before I even get a quote."
+    burnokint "Thirty-three degrees with eighty percent humidity. My body will short-circuit way before I even get a quote."
 
     show template report at slide_from_right:
         zoom 1.25
 
-    burnok "Just need three 'authentic' soundbites, a photo of a smiling cook, and I can get back to the hotel. I\'m already three hours behind my upload schedule."
+    burnokint "Just need three 'authentic' soundbites, a photo of a smiling cook, and I can get back to the hotel. I\'m already three hours behind my upload schedule."
 
     hide burnok
     with dissolve
 
+    scene bg entrancetolapazmarket at full
+    with dissolve
+
     "A sensory overload of raw pork, wet concrete, and a stray cat weaving through legs floods his senses. Nearby, a radio is playing a high-pitched, distorted variety show theme. "
 
-    "With enough sightseeing Burnok goes to his first location of interest."
+    "With enough sightseeing, Burnok goes to his first location of interest."
 
-    scene bg batchoystall
+    scene bg insidelapazmarket at full
     with dissolve
+    stop sound
 
     show lola consing
     with dissolve
+    play sound "audio/umilse_10.ogg"
     $ renpy.pause()
     "A woman so petite, but with firm arms, slams a mound of dough onto a wooden table."
     extend " The table has a deep groove worn into the center from decades of this."
+    extend " These raw noodles will become batchoy, the very soup that defines La Paz Market."
 
     show lola consing at left with move
 
     show burnok talking at right
 
-    burnok "Uh, excuse me? Lola Consing? Im from The Ledger. Im doing a piece on\—"
+    burnok "Uh, excuse me? Lola Consing was it? I'm from The Ledger. I'm doing a piece on-"
 
     show burnok at right
 
@@ -63,10 +72,11 @@ label act1_start:
 
     show burnok talking at right
 
-    burnok "I\'m not a tourist. I just wanted to ask about the traditional method..."
+    burnok "I'm not a tourist. I just wanted to ask about the traditional method..."
 
 menu:
-    '"What should I say?"'
+    
+    burnokint "What should I say?"
 
     "Can I try kneading it for a second?":
         show lola consing thinking at left
@@ -95,42 +105,48 @@ menu:
         "She coughs, a short, dry sound, and then immediately goes back to the slam-and-fold."
 
 label after_menu:
-    show burnok talking at right
+    hide lola consing
+    with dissolve
+    show burnok talking at right:
+        linear 0.5 xalign 0.5
+    $ renpy.pause()
+    burnok "I see. Thank you for your time."
 
-    burnok "I\’ll have the special la paz batchoy then."
 
-    scene bg lapazmarketstall
+    scene bg lapazmarketstall at full
     with dissolve
 
-    "Burnok moves to his next target location"
+    "Burnok moves to his next target location."
 
-    "*Thud*"
+    "*Thud*..."
+    extend "*Thud*..."
+    extend "*Thud*...!"
+    "The sound of a cleaver chopping through bone echoes through the market, punctuated by the occasional wet splash."
 
-    "*Thud*"
-
-    "He visits the meat section, a forest of hanging hooks. The sound of cleavers chopping through bone is constant, but the rhythm is erratic. Like a percussionist who can\'t keep a beat, but somehow it works."
+    "He visits the meat section, a forest of hanging hooks envelopes the place."
     "A fly then lands on his recorder, Although he is too shunned to shoo it off."
 
     show kuya nonoy at left
+    with dissolve
 
     nonoy "You look like you\'re about to lose your breakfast, alog. First time seeing where the 'authentic' marrow comes from?"
 
     show burnok talking at right
 
-    burnok "Uhh... I usually just see the final product. On a white bowl. With garnish."
+    burnok "Ahaha... I usually just see the final product. On a white bowl... With garnish."
 
     show burnok thinking at right
 
 menu:
-    '"What should I ask him?"'
+    burnokint "They called him Kuya Nonoy. What should I ask him?"
 
-    "Is it always this loud in here?":
+    "So Kuya Nonoy, is it always this loud in here?":
         show burnok at right
 
         nonoy "Noise is how you know the city is awake and bustling, which means customers will flock."
         extend " If the cleavers stop, half the restaurants in La Paz close by noon."
 
-    "How do you stand the smell?":
+    "Kuya Nonoy, how do you stand the smell?":
         show burnok at right
 
         nonoy "It smells like a livelihood."
@@ -142,12 +158,15 @@ menu:
 label after_menu_2:
     scene bg batchoystall
     with dissolve
-
+    "Burnok finally enters the batchoy stall where the ingredients he encountered are being used."
+    show burnok talking
+    burnok "I\’ll have the special la paz batchoy please."
     show burnok thinking
 
-    "The wooden stool creaks as I sit down."
+    "The wooden stool creaks as he sits down."
+    burnokint "Huh..."
 
-    "A heavy, ceramic bowl is placed in front of me, its surface shimmering with golden beads of fat."
+    "A heavy, ceramic bowl is placed in front of Burnok, its surface shimmering with golden beads of fat."
 
     "Steam rises in thick plumes, carrying the scent of slow-simmered marrow and toasted garlic."
 
@@ -157,23 +176,25 @@ label after_menu_2:
 
     show burnok
 
-    "I pick up the spoon. It\’s warm."
+    "Burnok picks up the spoon." 
+    show burnok thinking
+    burnokint "It\’s warm."
 
     $ batchoy_state = "full"
 
     call screen batchoy_eating
 
-    "I take a sip of the broth first. It\’s deep, salty, and carries a faint metallic tang from the liver."
+    "He takes a sip of the broth first. It\’s deep, salty, and carries a faint metallic tang from the liver."
 
     show burnok talking
 
-    "It doesn\'t taste like a recipe. It tastes like... effort."
+    burnok "It doesn\'t taste like a recipe. It tastes like... effort."
 
     show burnok
 
-menu:
-    "I look at Lola Consing\’s noodles\—swirling in the golden brown liquid."
+    "He then looks at Lola Consing\’s noodles, swirling in the golden brown liquid."
 
+menu:
     "Focus on the ingredients":
         show burnok talking
 
@@ -183,20 +204,20 @@ menu:
 
         show burnok
 
-        "I realize that every ingredient here was a burden on someone\'s back just a few hours ago."
+        "A realization settles on him, knowing that every ingredient here was a burden on someone\'s back just a few hours ago."
 
     "Focus on the person serving it":
         show burnok talking
 
-        burnok "I wonder how many thousands of bowls like this Lola Consing has made."
+        burnok "I wonder how many thousands of bowls like this Lola Consing has helped made."
 
-        burnok "She\’s not just making food; she\’s keeping a rhythm alive that most people just swallow and forget."
+        burnok "She\’s not just making food, she\’s keeping a rhythm alive that most people just swallow and forget."
 
-        show burnok
+        show burnok thinking
 
-        "The server wipes a nearby table with a rag, not even glancing at the 'heritage' I\'m trying so hard to document."
+        burnokint "The server wipes a nearby table with a rag, not even glancing at the 'heritage' I\'m trying so hard to document."
 
-        "To them, it's just a meal. To me, it's starting to feel like a responsibility."
+        burnokint "To them, it's just a meal. To me, it's starting to feel like a responsibility."
 
 label after_menu_3:
     scene bg entrancetolapazmarket
@@ -204,18 +225,20 @@ label after_menu_3:
 
     show burnok
 
-    "I step back out into the street. The market doesn\'t pause for me. Lola Consing is already serving the next customer. Kuya Nonoy is already reaching for another piece of meat."
+    "Burnok steps back out into the street. The market doesn\'t pause for him. Lola Consing is already kneading her next batch of noodles. Kuya Nonoy is already reaching for another piece of meat."
 
-    show burnok talking
+    show burnok thinking
 
-    burnok "I came here looking for a story about food. But everything I've seen so far is a story about work. About people who don't have the luxury of calling what they do 'heritage.'"
+    burnokint "I came here looking for a story about food. But everything I've seen so far is a story about work. About people who don't have the luxury of calling what they do 'heritage.'"
 
     show burnok
 
-    "I check my map. Ted\'s is three minutes away. Air conditioning, printed menus, consistent pricing. The other side of the same bowl."
+    "Burnok rummages through his map."
+    show burnok thinking
+    burnokint"Ted's is three minutes away. Air conditioning, printed menus, consistent pricing. The other side of the same bowl."
 
     show burnok talking
 
-    "Now, how different is it when someone puts a roof and a logo on all of this?"
+    burnok "Now, how different is it when someone puts a roof and a logo on all of this?"
     # Go to Act 2
     jump act2_start

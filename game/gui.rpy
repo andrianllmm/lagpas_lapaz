@@ -113,10 +113,11 @@ define gui.name_text_size = 33
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
 define gui.name_xalign = 0.0
+define gui.name_text_color = gui.text_color
 
 ## The width, height, and borders of the box containing the character's name, or
 ## None to automatically size it.
-define gui.namebox_xpos = 300        # Move right enough to clear the fade
+define gui.namebox_xpos = 400       # Move right enough to clear the fade
 define gui.namebox_ypos = 0       # Move above the dialogue box (negative value)
 define gui.namebox_width = 300      # Give it comfortable width
 define gui.namebox_height = 60

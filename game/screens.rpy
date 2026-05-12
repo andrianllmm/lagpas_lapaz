@@ -145,9 +145,11 @@ style namebox:
     ysize gui.namebox_height
 
 style say_label:
-    properties gui.text_properties("name", accent=True)
+    properties gui.text_properties("name", accent=False)
     xalign gui.name_xalign
     yalign 0.5
+    color gui.text_color
+    bold True
 
 style say_dialogue:
     properties gui.text_properties("dialogue")

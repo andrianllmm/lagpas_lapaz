@@ -19,6 +19,7 @@ label act1_start:
 
     scene bg entrancetolapazmarket2 at full
     with Dissolve(2.0)
+    play music "music/umib_007.ogg" loop
 
     show burnok thinking
 
@@ -39,7 +40,7 @@ label act1_start:
 
     "A sensory overload of raw pork, wet concrete, and a stray cat weaving through legs floods his senses. Nearby, a radio is playing a high-pitched, distorted variety show theme. "
 
-    "With enough sightseeing Burnok goes to his first location of interest."
+    "With enough sightseeing, Burnok goes to his first location of interest."
 
     scene bg insidelapazmarket at full
     with dissolve
@@ -49,7 +50,7 @@ label act1_start:
     $ renpy.pause()
     "A woman so petite, but with firm arms, slams a mound of dough onto a wooden table."
     extend " The table has a deep groove worn into the center from decades of this."
-    extend " These raw noodles will become batchoy—the very soup that defines La Paz Market."
+    extend " These raw noodles will become batchoy, the very soup that defines La Paz Market."
 
     show lola consing at left with move
 
@@ -100,9 +101,11 @@ menu:
         "She coughs, a short, dry sound, and then immediately goes back to the slam-and-fold."
 
 label after_menu:
+    hide lola consing
+    with dissolve
     show burnok talking at right:
         linear 0.5 xalign 0.5
-
+    $ renpy.pause()
     burnok "I see. Thank you for your time."
 
 
@@ -151,7 +154,7 @@ menu:
 label after_menu_2:
     scene bg batchoystall
     with dissolve
-    "Burnok finally enters the stall where the ingredients he encountered are being used."
+    "Burnok finally enters the batchoy stall where the ingredients he encountered are being used."
     show burnok talking
     burnok "I\’ll have the special la paz batchoy please."
     show burnok thinking
@@ -214,11 +217,11 @@ label after_menu_3:
 
     show burnok
 
-    "Burnok steps back out into the street. The market doesn\'t pause for him. Lola Consing is already serving the next customer. Kuya Nonoy is already reaching for another piece of meat."
+    "Burnok steps back out into the street. The market doesn\'t pause for him. Lola Consing is already kneading her next batch of noodles. Kuya Nonoy is already reaching for another piece of meat."
 
-    show burnok talking
+    show burnok thinking
 
-    burnok "I came here looking for a story about food. But everything I've seen so far is a story about work. About people who don't have the luxury of calling what they do 'heritage.'"
+    burnokint "I came here looking for a story about food. But everything I've seen so far is a story about work. About people who don't have the luxury of calling what they do 'heritage.'"
 
     show burnok
 

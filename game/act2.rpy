@@ -2,10 +2,10 @@ label act2_start:
 
     ## ACT 2 - STRUCTURE (MARKET AND COMMERCE)
     
-    scene bg smallrestaurant
+    scene bg smallrestaurant2
     with Dissolve(1.0)
     
-    "The air conditioning is a godsend, but it feels sterile after the market."
+    "Burnok now enters a restaurant. The air conditioning is a godsend, but it feels sterile after the market."
     
     show belinda talking at left:
         xalign 0.25
@@ -33,37 +33,48 @@ label act2_start:
     hide belinda talking
     with dissolve
     
-    scene bg smallrestaurant2
+    scene bg smallrestaurant
     with Dissolve(1.0)
+    "After several steps he visits the modern stall within the area"
+    "Neon lights. A sous-vide machine is humming in the corner."
+    show marco at center
+    with dissolve 
+    "Marco is plating batchoy with a pair of tweezers."
     
-    "Neon lights. A sous-vide machine is humming in the corner. Marco is plating batchoy with a pair of tweezers."
-    
-    show marco at right
+    show marco talking at right
+    show burnok thinking at left
     with dissolve
     
-    marco "People think I'm betraying the dish because I use a pork dashi base. But look at this crowd, Burnok. They're twenty-somethings. They'd never step foot in the wet market. Being trendy is how you pique their interest."
+    marco "People think I'm betraying the dish because I use a pork dashi base."
+    extend " But look at this crowd, Burnok."
+    extend " They're twenty-somethings."
+    extend " They'd never step foot in the wet market. Being trendy is how you pique their interest."
     
-    show burnok at left
+    show burnok thinking at left
     with dissolve
     
     burnok "But if you change the base, is it still the same dish?"
     
     show marco thinking at right
     
-    marco "(He stops, his tweezers hovering over a piece of chicharon.) I grew up in my Lolo's stall. I have his old cleaver in my kitchen. I just... I don't want us to be a 'heritage' museum. I want us to be relevant. Besides, time changes everything; it's an adapt or be stagnant in this flowing river of so-called life."
+    "He stops, his tweezers still hovering over a piece of chicharon."
+    show marco talking at right
+    marco "I grew up in my Lolo's stall. I have his old cleaver in my kitchen. I just..."
+    extend " I don't want us to be a 'heritage' museum. I want us to be relevant. Besides, time changes everything, it's an adapt or be stagnant in this flowing river of so-called life."
     
+    show marco thinking at right
     "He looks at his phone. A new notification for a food vlog. He sighs, looking more tired than he did a minute ago."
     
     hide marco
     hide burnok
     with dissolve
     
-    scene bg lapazmarketstall2
+    scene bg moodyroom
     with Dissolve(1.0)
     
-    "I'm at a stall with a bright vinyl banner. There's a QR code for payments. The 'Special' is prominently displayed."
+    burnokint"I'm at a stall with a bright vinyl banner. There's a QR code for payments and the 'Special' is prominently displayed..."
     
-    "The bowl is porcelain, perfectly white. The garnish is arranged like a bouquet."
+    burnokint "This porcelain bowl here, perfectly white. All the garnish is arranged like a bouquet."
     
     show burnok thinking at center
     with dissolve
@@ -73,13 +84,14 @@ label act2_start:
     hide burnok
     with dissolve
     
-    "I take a bite. It's sweet. Too sweet. I can't even get a hint of salt. The liver is missing that punch, replaced by extra sugar and MSG."
+    burnokint "I take a bite. It's sweet. Too sweet. I can't even get a hint of salt."
+    extend " The liver is missing that punch, replaced by extra sugar and MSG."
     
     show burnok at center
     with dissolve
     
     menu:
-        "What should I think about this bowl?"
+        burnokint "What should I think about this bowl?"
         
         "So... this is batchoy for people who are afraid of the market.":
             burnok "They've sanded down all the rough edges. It's a caricature of what Lola Consing makes."

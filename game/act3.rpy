@@ -47,6 +47,7 @@ menu:
         santos "It’s a symbol. When you eat batchoy, you aren\’t just consuming calories, you\’re consuming history, pride, and social status."
 
 label act3_continuation:
+    play music "audio/umib_043.ogg" loop
     scene bg lapazplaza
     with dissolve
 

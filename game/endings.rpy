@@ -1,7 +1,5 @@
 label ending_labor:
     scene bg black
-    
-    play music "soft-piano.mp3" fadein 0.5 fadeout 0.5 loop
 
     "The Hands That Made It"
 
@@ -41,7 +39,6 @@ label ending_labor:
 label ending_economics:
     scene bg black
 
-    play music "soft-piano.mp3" fadein 0.5 fadeout 0.5 loop
 
     "A Bowl Worth 80 Pesos"
 
@@ -69,15 +66,13 @@ label ending_economics:
     burnokint "The restaurants are fuller than ever, but when I check back in on the market, the stall prices have tripled. Lola Consing never reads the article. She\’s too busy working."
 
     scene bg black
-    ""
+    
 
     return
 
 
 label ending_identity:
     scene bg black
-
-    play music "soft-piano.mp3" fadein 0.5 fadeout 0.5 loop
 
     "To the Bone"
 
@@ -107,6 +102,6 @@ label ending_identity:
     burnokint "It\’s a beloved piece of writing, but as I see the long lines of influencers blocking the entrance to the market stalls, I wonder if I\’ve turned a living culture into a museum exhibit."
 
     scene bg black
-    ""
+    
 
     return

@@ -73,6 +73,7 @@ label act2_start:
     with dissolve
     scene bg moodyroom
     with Dissolve(2.0)
+    play music "audio/umib_012.ogg" loop
     
     burnokint"I'm at a stall for tourists with a bright vinyl banner. There's a QR code for payments and the 'Special' is prominently displayed..."
     
@@ -141,7 +142,7 @@ label act2_start:
     
     hide burnok
     with dissolve
-    
+    stop music fadeout 2.0
     # Transition to Act 3
     scene bg black
     with Dissolve(1.5)

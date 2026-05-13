@@ -43,14 +43,16 @@ label act1_start:
     "A sensory overload of raw pork, wet concrete, and a stray cat weaving through legs floods his senses. Nearby, a radio is playing a high-pitched, distorted variety show theme. "
 
     "With enough sightseeing, Burnok goes to his first location of interest."
+    stop music fadeout 6.0
 
     scene bg insidelapazmarket at full
     with dissolve
     stop sound
-
+   
     show lola consing
     with dissolve
-    play sound "audio/umilse_10.ogg"
+    
+
     $ renpy.pause()
     "A woman so petite, but with firm arms, slams a mound of dough onto a wooden table."
     extend " The table has a deep groove worn into the center from decades of this."
